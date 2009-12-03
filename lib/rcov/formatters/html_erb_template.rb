@@ -57,6 +57,11 @@ module Rcov
       def get_binding
         binding 
       end
+      
+      def escape_html(str)
+        str.gsub(/</, '&lt;').gsub(/>/, '&gt;')
+      end
+      
     end
   end
 end
